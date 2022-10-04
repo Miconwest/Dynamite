@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Lobster&     family=Quicksand:wght@300;600;
+        700&family=Roboto:ital,wght@0,700;1,700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/6dfb298c86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="nav_bar " id="Home">
+    <nav>
+      <div class="nav_div">
+        <div>
+          <a href="#Home" class="my_logo">M<span class="spogo">icon</span></a>
+        </div>
+        <div class="slit">
+          <ul class="nav_item" id="mobile_nav">
+            <li class="nav_list"><a href="#Home" class="nav_link">Home</a></li>
+            <li class="nav_list"><a href="#about" class="nav_link">About</a></li>
+            <li class="nav_list"><a href="#contact" class="nav_link">Contact</a></li>
+            <i class="fa fa-xmark close_tab" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fas fa-bars open_tab" onclick="openMenu()"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hero_page ">
+    <div class="child_1">
+      <h2 class="will">Hi, my name is<span class="int">Michael</span></h2>
+      <p class="hero_text">Am a frontend web developer.</p>
+    </div>
+    <div class="child_1_!">
+      <img src="./images/background pic.png" class="hero_pic">
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="about_div">
+        <div class="about_img">
+          <img src="./images/about pic.png" class="about_image">
+        </div>
+        <div class="about_container">
+          <div>
+            <h2 class="about_header">About Me</h2>
+            <p class="about_text">I'm Michael Adekola, based in Oyo state, Nigeria 
+              experienced and seasoned in web development.
+            </p>
+          </div>
+        
+          <div class="about_card">
+            <p class="about_list" onclick="displaySkill()"> Skills</p>
+            <p class="about_list" onclick="displayExperience()"> Experience</p>
+            <p class="about_list" onclick="displayEducation()">Education</p>
+          </div>
+          <div class="demo" >
+            
+            <div class="showcase_skill" id="vip">
+              <i class="fa fa-xmark iconz" onclick="removeSkill()" ></i>
+              <ul>
+               <li class="skill_set">HTML</li>
+               <li class="skill_set">CSS</li>
+               <li class="skill_set">Javascript</li>
+              </ul>
+           </div>
+           <div class="showcase_experience" id="espn">
+            <i class="fa fa-xmark iconz" onclick="removeExperience()"></i>
+            <p class="skill_set">Have couple of years in website designing</p>
+          </div>
+          <div class="showcase_education" id="wing">
+            <i class="fa fa-xmark iconz" onclick="removeEducation()"></i>
+              <p class="skill_set">Started my web development education at <br> CareerTouch academy 
+                in the year 2022.
+              </p>
+        </div>
+    </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <h2 class="contact_title">Contact Me</h2>
+    <div class="contact_flex">
+      <div class="child1">
+        <h3 class="title">Contact info: </h3>
+        <div class="contact_icon">
+          <div>
+            <i class="fa-solid fa-phone  tact"></i>
+          </div>
+          <div>
+            <p class="c_info">+234-803-094-5396</p>
+          </div>
+         
+        </div>
+        <div class="contact_icon">
+          <div>
+            <i class="fa-solid fa-envelope tact"></i>
+          </div>
+          <div>
+            <p class="c_info">micon4399@gmail.com</p>
+          </div>
+         
+        </div>
+        <div class="social_icon">
+          <a href=""><i class="fa-brands fa-twitter social"></i></a>
+          <a href=""><i class="fa-brands fa-facebook social"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin social"></i></a>
+        </div>
+      </div>
+      <div class="child2">
+        <h3 class="title"> Message me</h3>
+        <form onsubmit="sendMail()">
+          <div class="form_input">
+            <label class="contact_label">Name</label>
+            <input type="text" required>
+          </div>
+          <div class="form_input">
+            <label class="contact_label">Email</label>
+            <input type="text" required>
+          </div>
+          <div class="form_input">
+            <label class="contact_label">Message</label><br>
+            <textarea name="" id="" cols="24" rows="10" required></textarea>
+          </div>
+          <div class="btn_div">
+            <button type="submit" class="btn">Send Message<i class="fa-solid fa-paper-plane submit_btn"></i></button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="game">
+    <div class="game_field">
+        <div class="players">
+            <div class="player1">
+                <h1>PLAYER1</h1>
+                <div id="globalScore1">
+                    0
+                </div>
+                <div class="current_box">
+                    <div class="current_label">current score</div>
+                    <div class="current_score" id="current1">0</div>
+                </div> 
+            </div>
+
+            <div class="player2">
+                <h1>PLAYER2</h1>
+                <div id="globalScore2">
+                    0
+                </div>
+                <div class="current_box">
+                    <div class="current_label">current score</div>
+                    <div class="current_score" id="current1">0</div>
+                </div>  
+            </div>
+        </div>
+
+        <button id="newGame">NEW GAME </button>
+        <button id="rollDice" onclick="roll()">ROLL DICE </button> 
+        <button id="finalScore">FINAL SCORE </button> 
+        <div class="dice_stage">
+            <img src="./images/dice 1.jpg" id="die_1">
+            <img src="./images/dice 2.jpg" id="die_2">
+        </div>
+    </div>
+</div>
+  
+
+
+<script src="./javascript/main.js"></script>
+
+<script src="./javascript/game.js"></script>
+</body>
+</html>
