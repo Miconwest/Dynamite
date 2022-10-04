@@ -467,6 +467,7 @@ textarea{
     }
     .title{
         font-size: 20px;
+        margin: -5px;
     }
     .child2{
         width: 50%;
