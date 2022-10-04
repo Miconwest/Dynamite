@@ -171,7 +171,7 @@ a{
 }
 
 #contact{
-    height: 100vh;
+    height: 110vh;
     background-color: rgb(21, 73, 110, 0.6);
 }
 .contact_flex{
@@ -246,7 +246,7 @@ textarea{
     padding-right: 20px;
 }
 .social_icon{
-    margin: 40px;
+    margin: 20px;
 }
 .social{
     padding: 20px;
@@ -455,7 +455,6 @@ textarea{
     }
     .contact_flex{
         display: block;
-        /* flex-direction: column; */
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
@@ -464,7 +463,7 @@ textarea{
         padding: 10px;
     }
     .social_icon{
-        margin: 15px;
+        margin: 10px;
     }
     .title{
         font-size: 20px;
@@ -473,5 +472,7 @@ textarea{
         width: 50%;
 
     }
-    
-}
+    /* ---game--- */
+    #game{
+        display: none;
+    }
