@@ -267,6 +267,10 @@ textarea{
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,109,154,1) 58%);
     position: relative;
 }
+#game >h1{
+    color: rgb(150, 204, 238);
+    padding-top: 20px;
+}
 .game_field{
     background-color: white;
     box-shadow: 5px 8px 12px 8px rgb(37, 37, 37, 0.8);
@@ -274,7 +278,7 @@ textarea{
     width: 700px;
     position: absolute;
     top: 100px;
-    left: 450px;
+    left: 400px;
     padding: 50px;
 }
 .player1 >h1{
@@ -353,6 +357,9 @@ textarea{
     top: 120px;
     left: 300px;
 }
+.mobile_game{
+    display: none;
+}
 
 
 /* ----mobile device----- */
@@ -396,6 +403,7 @@ textarea{
     }
     .nav_list {
         display:list-item;
+        margin: 50px;
         list-style: none;
         padding-top: 20px;
         color: #E1EBEE;
@@ -451,7 +459,7 @@ textarea{
     }
 
     #contact{
-        height: 120vh;
+        height: 130vh;
     }
     .contact_flex{
         display: block;
@@ -471,9 +479,19 @@ textarea{
     }
     .child2{
         width: 50%;
-
     }
     /* ---game--- */
     #game{
+       height:50vh;
+       width: auto;
+    }
+    #game >h1{
+       display: none;
+     }
+    #game >p{
+    display: block;
+    padding: 50px;
+    }
+    .game_field{
         display: none;
     }
