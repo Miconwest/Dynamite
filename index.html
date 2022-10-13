@@ -34,7 +34,7 @@
 
   <div class="hero_page ">
     <div class="child_1">
-      <h2 class="will">Hi, my name is<span class="int">Michael</span></h2>
+      <h2 class="will">Hi, my name is<span class="int animate">Michael</span></h2>
       <p class="hero_text">Am a frontend web developer.</p>
     </div>
     <div class="child_1_!">
@@ -44,43 +44,40 @@
 
   <div id="about">
     <div class="about_div">
-        <div class="about_img">
-          <img src="./images/about pic.png" class="about_image">
+      
+        <div class="about_tab">
+          <h2 class="about_header">About Me</h2>
+          <p class="about_text">I'm Michael Adekola, based in Oyo state, Nigeria.
+            Am an experienced and seasoned web developer. Over the years, I have created series of websites 
+            be it for cryptocurrency trading or for e-commerce. The websites are user-friendly and very mobile 
+            responsive. i also specialize in mobile app development with great asthetics.
+          </p>
         </div>
-        <div class="about_container">
-          <div>
-            <h2 class="about_header">About Me</h2>
-            <p class="about_text">I'm Michael Adekola, based in Oyo state, Nigeria 
-              experienced and seasoned in web development.
-            </p>
-          </div>
-        
-          <div class="about_card">
-            <p class="about_list" onclick="displaySkill()"> Skills</p>
-            <p class="about_list" onclick="displayExperience()"> Experience</p>
-            <p class="about_list" onclick="displayEducation()">Education</p>
-          </div>
+      
+        <div class="about_card">
+          <p class="about_list active" onclick="myFunction()"> Skills</p>
+          <p class="about_list" onclick="myFunction()"> Experience</p>
+          <p class="about_list" onclick="myFunction()">Education</p>
+       
           <div class="demo" >
-            
-            <div class="showcase_skill" id="vip">
-              <i class="fa fa-xmark iconz" onclick="removeSkill()" ></i>
+            <div class="showcase skill">
               <ul>
-               <li class="skill_set">HTML</li>
-               <li class="skill_set">CSS</li>
-               <li class="skill_set">Javascript</li>
+                <li >HTML</li>
+                <li >CSS</li>
+                <li >JAVASCRIPT</li>
               </ul>
-           </div>
-           <div class="showcase_experience" id="espn">
-            <i class="fa fa-xmark iconz" onclick="removeExperience()"></i>
-            <p class="skill_set">Designed various website proto-types over the years which are mobile reponsive and user-friendly
+            </div>
+            <div class="showcase">
+            <p class="skill_set">Designed various website proto-types over the years which are mobile reponsive 
+                and user-friendly
             </p>
-          </div>
-          <div class="showcase_education" id="wing">
-            <i class="fa fa-xmark iconz" onclick="removeEducation()"></i>
-              <p class="skill_set">Started learning web development at CarrerTouch academy with HTML and CSS which also included javascript for interactions on the website. 
+            </div>
+            <div class="showcase">
+              <p class="skill_set">Started the journey of front end web development learning at CarrerTouch 
+                academy with HTML and CSS which also included javascript for interactions on the website. 
               </p>
-        </div>
-    </div>
+            </div>
+          </div>
         </div>
     </div>
   </div>
@@ -95,7 +92,7 @@
             <i class="fa-solid fa-phone  tact"></i>
           </div>
           <div>
-            <p class="c_info">+2348030945396</p>
+           <a href="tel:+2348030945396">+2348030945396</a>
           </div>
          
         </div>
@@ -104,7 +101,7 @@
             <i class="fa-solid fa-envelope tact"></i>
           </div>
           <div>
-            <p class="c_info">micon4399@gmail.com</p>
+            <a href="mailto:micon4399@gmail.com">micon4399@gmail.com</a>
           </div>
          
         </div>
@@ -116,12 +113,12 @@
       </div>
       <div class="child2">
         <h3 class="title"> Message me</h3>
-        <form onsubmit="sendMail()">
+        <form>
           <div class="form_input">
             <label class="contact_label">Name</label>
             <input type="text" required>
           </div>
-          <div class="form_input">
+          <div class="form_input"> 
             <label class="contact_label">Email</label>
             <input type="text" required>
           </div>
@@ -130,7 +127,7 @@
             <textarea name="" id="" cols="24" rows="10" required></textarea>
           </div>
           <div class="btn_div">
-            <button type="submit" class="btn">Send Message<i class="fa-solid fa-paper-plane submit_btn"></i></button>
+            <a href="mailto:micon4399@gmail.com"><button type="submit" class="btn"> Send Message <i class="fa-solid fa-paper-plane submit_btn"></i></button></a>
           </div>
           
         </form>
@@ -170,11 +167,16 @@
         <button id="rollDice" onclick="roll()">ROLL DICE </button> 
         <button id="finalScore">FINAL SCORE </button> 
         <div class="dice_stage">
-            <img src="./images/dice 1.jpg" id="die_1">
-            <img src="./images/dice 2.jpg" id="die_2">
+            <img src="./images/dice1.jpg" id="die_1">
+            <img src="./images/dice2.jpg" id="die_2">
         </div>
     </div>
 </div>
+<footer>
+  <div class="foots">
+    <p>© 2022 Micon All rights reserved. Privacy Policy</p>
+  </div>
+</footer>
   
 
 

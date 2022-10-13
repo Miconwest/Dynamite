@@ -71,7 +71,7 @@ a{
     font-weight: 600;
     padding-left: 5px;
     color: #edf5e1;
-    font-size: 50px;
+    font-size: 55px;
 }
 .will{
     font-size:42px;
@@ -84,29 +84,39 @@ a{
     color: rgb(237, 245, 225, 0.4);
     font-family: "ubuntu", sans-serif;
 }
+.animate{
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 100% center;
+  }
+}
 
 #about{
     height: 90vh;
     background-color: #E1EBEE;
 }
-.about_img{
-    width: 30%;
-}
-.about_image{
-    height: 400px;
-    border-radius: 200px;
-    background-color: #025088;
-    margin-top:100px;
-    margin-left: 50px;
-}
-.about_div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.about_container{
-    margin-left: 100px;
+.about_tab{
+    text-align: center;
+    padding: 100px 100px 50px;
 }
 .about_header{
     font-size: 35px;
@@ -115,64 +125,54 @@ a{
 .about_text{
     font-size: 20px;
     font-family: "ubuntu", sans-serif;
+    word-spacing: 5px;
     color: #011b39;
+    margin-top: 10px;
 }
 .about_card{
     display: flex;
-    margin: 20px 0 40px;
+    margin-left: 100px;
+    position: relative;
 }
 .about_list{
     margin-right: 50px;
+    height: fit-content;
     font-weight: bolder;
     color: #011b39;
     font-size: 18px;
-   
+    padding: 10px;
+    cursor: pointer;
 }
-.about_list:active{
+.about_list.active{
     color: white;
+    background-color: #025088;
+    border-radius: 5px;
+}
+.about_list:hover{
+    color: white;
+    background-color: #025088;
+    border-radius: 5px;
+}
+.demo{
+    position: absolute;
+    top: 70px;
 }
 .skill_set{
-  margin: 10px;
-  list-style: none;
+ 
   
 }
-.showcase_skill{
-    background-color: #025088;
-    border-radius: 15px;
-    padding: 10px;
-    color:aliceblue;
-    display: none;
-    width: 250px;
+.showcase{
+    color: #011b39;
 }
-.showcase_experience{
-    background-color: #025088;
-    border-radius: 15px;
-    padding: 10px;
-    color:white;
-    display: none;
-    width: 300px;
-}
-.showcase_education{
-    background-color: #025088;
-    border-radius: 15px;
-    padding: 10px;
-    color:white;
-    display: none;
-    width: 300px;
-}
-.icon{
-    font-size: 22px;
-    padding: 10px;
-}
-.iconz{
-    font-size: 22px;
-    color: #5379be;
-    display: hidden;
+.showcase > ul > li{
+    list-style: none;
+    color: #011b39;
+    margin-top: 10px;
 }
 
 #contact{
     height: 110vh;
-    background-color: rgb(21, 73, 110, 0.6);
+    background-color: #E1EBEE;
 }
 .contact_flex{
     display: flex;
@@ -192,9 +192,13 @@ a{
     color: #011b39;
     padding-top: 50px;
 }
-.contact_icon p{
-    color: aliceblue;
+.contact_icon a{
+    color: #025088;
     font-size: 18px;
+    text-decoration: none;
+}
+.contact_icon a:hover{
+    color: #429ee0;
 }
 .title{
     text-align: center;
@@ -202,12 +206,13 @@ a{
     color: #011b39;
     margin: 30px;
 }
-input{
+input,textarea{
     border: none;
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    background-color: rgb(225, 225, 225, 0.6);
+    background-color: rgb(209, 206, 241);
+
 }
 .form_input{
     margin: 10px;
@@ -217,22 +222,28 @@ input{
     color: #fff;
 }
 .btn{
-    background-color:#2c2ca1;
+    background-color: #025088;
     color: rgb(255, 255, 255);
     border-radius: 30px;
     border: none;
     padding: 15px;
 }
+.btn:hover {
+    background-color: transparent;
+    border-color: #025088;;
+    color: #025088;
+    transition: 0.5s;
+}
+.submit_btn:hover{
+    /* color: #025088; */
+}
 .btn_div{
     text-align: center;
 }
-textarea{
-    background-color: rgb(225, 225, 225, 0.6);
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
+.btn_div > a:hover{
+    color: #025088;
 }
+
 .contact_icon{
     margin: 40px;
     display: flex;
@@ -244,27 +255,28 @@ textarea{
 .tact{
     font-size: 18px;
     padding-right: 20px;
+    color: #025088;
 }
 .social_icon{
     margin: 20px;
 }
 .social{
     padding: 20px;
-    font-size: 25px;
+    font-size: 28px;
+    color: #025088;;
+}
+.social:hover{
+    color: blueviolet;
+    font-size: 30px;
+    transition: 0.5s;
 }
 
 /* -----Game div---- */
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "roboto", sans-serif;
-}
+
 #game{
-    height: 100vh;
+    height: 120vh;
     text-align: center;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(214,109,154,1) 58%);
+    background-color: #E1EBEE;
     position: relative;
 }
 #game >h1{
@@ -373,6 +385,12 @@ textarea{
     display: none;
 }
 
+/* -------------footer-- */
+.foots{
+    height: 30vh;
+    background-color: rgb(173, 173, 179);
+}
+
 @media only screen and (max-width: 920px){
     .close_tab{
         display: block;
@@ -423,43 +441,39 @@ textarea{
     }
     .int{
         font-size: 30px;
+        padding-left: 10px;
     }
     .hero_text{
         font-size: 18px;
     }
+    /* -----about- */
     #about{
-        height: 105vh;
-        background-color: #E1EBEE;
-    }
-    .about_image{
-        height: 150px;
-        border-radius: 300px;
-        text-align: center;
+        height: 50vh;
     }
     .about_div{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        width: auto;
     }
-    .about_container{
-        margin: 20px;
+    .about_card{
+        margin: 10px;
     }
-
     .about_header{
         font-size: 25px;
     }
     .about_text{
         font-size: 15px;
     }
+    .about_tab{
+        padding: 10px;
+
+    }
     .about_list{
         display: flex;
         margin-right: 30px;
-        cursor: pointer;
+        
     }
-
+/* --------contact--- */
     #contact{
-        height: 130vh;
+        height: 100vh;
     }
     .contact_flex{
         display: block;
@@ -471,26 +485,36 @@ textarea{
         padding: 10px;
     }
     .social_icon{
-        margin: 10px;
+        margin: 0px 10px;
+        text-align: center;
+    }
+    .contact_icon{
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
     }
     .title{
         font-size: 20px;
-        margin: 5px;
+        margin: 20px;
+        text-align: left;
+    }
+    .child1{
+        width: auto;
     }
     .child2{
-        width: 50%;
+        width: auto;
     }
     /* ---game--- */
     #game{
-       height:50vh;
+       height:15vh;
        width: auto;
     }
     #game >h1{
        display: none;
      }
     #game >p{
-    display: block;
-    padding: 50px;
+        display: block;
+        padding: 50px;
     }
     .game_field{
         display: none;
